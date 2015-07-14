@@ -1,0 +1,79 @@
+.tcf-container{
+    width: 300px; 
+    height: 40px;
+    right: 20px; 
+    left: inherit; 
+    bottom: 0px;
+    position: fixed;
+    -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+    background: rgb(246,60,4) !important;
+    background: rgba(246,60,4,1.00) !important;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 0 0;
+    z-index: 99999;
+    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+.tcf-title{
+    color: #fff;
+    font-size: 19px;
+    padding: 8px 25px 10px 0px !important;
+    font-weight: bold;
+    cursor: pointer;
+}
+.tcf-content{
+    background: rgb(255,255,255) !important;
+    background: rgba(255,255,255,1.00) !important;
+    padding: 5px;
+    height: 100%;
+}
+
+.tcf-content input, .tcf-content textarea{
+    width:100%;
+    font-size: 20px !important;
+    padding: 0px !important;
+    margin-bottom: 13px !important;
+    color: #3a3c41 !important;
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    float:left;
+}
+
+.tcf-container input[type="text"]{
+    height: 40px;
+}
+
+#tcf-content-send{
+    -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.25);
+    background-color: rgb(246,60,4);
+    background-color: rgba(246,60,4,1.00);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 1px;
+    float: right;
+}
+.tcf-content-sending{
+    background-color: rgba(255, 158, 129, 1) !important;
+    background-color: rgb(255,158,129) !important;
+    cursor: default;
+}
+
+#tcf-form-success{
+    display: none;
+}
+#tcf-form-success p{
+    font-size: 20px !important;
+}
+#tcf-message-fill-all-fields{
+    display: none;
+    color: #F00;
+    font-size: 16px;
+}
