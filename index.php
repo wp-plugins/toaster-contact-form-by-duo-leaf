@@ -3,10 +3,10 @@
 /**
  * Plugin Name: Toaster Contact Form by Duo Leaf
  * Plugin URI: http://DuoLeaf.com/toaster-contact-from-wordpress-plugin/
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Duo Leaf
  * Author URI: http://DuoLeaf.com/
- * Description: 
+ * Description: This plugin creates contact form on the bottom right corner of your site, with a 'toaster' like effect.
  * License: GPLv3 or later
  */
 class dl_tcf_ToasterWidget {
@@ -20,11 +20,12 @@ class dl_tcf_ToasterWidget {
     public function __construct($pluginInfo) {
 
         $this->pluginInfo = $pluginInfo;
-        
+
         require_once(WP_PLUGIN_DIR . '/' . $this->pluginInfo->name . '/core/settings.php');
 
         add_action('admin_menu', array(&$this, 'adminPanelsAndMetaBoxes'));
         add_action('wp_enqueue_scripts', array(&$this, 'enqueueScriptsECss'));
+        add_action('admin_enqueue_scripts', array(&$this, 'adminEnqueueScripts'));
         add_action('wp_footer', array(&$this, 'widgetInject'));
         add_action('wp_ajax_nopriv_toaster_contact_form', array(&$this, 'postAjax'));
         add_action('wp_ajax_toaster_contact_form', array(&$this, 'postAjax'));
@@ -39,7 +40,7 @@ class dl_tcf_ToasterWidget {
         $emailBody .= $settings->messageField . ': ' . $_POST['messageField'] . "\n";
 
         echo wp_mail($settings->emailTO, 'Contact Form', $emailBody);
-        
+
         wp_die();
     }
 
@@ -52,7 +53,7 @@ class dl_tcf_ToasterWidget {
 
 
         if (isset($_POST['submit'])) {
-            
+
             $settings = new dl_tcf_Settings();
 
             $settings->title = $_POST['title'];
@@ -89,6 +90,16 @@ class dl_tcf_ToasterWidget {
 
         wp_enqueue_style('dl_tfc_css', WP_PLUGIN_URL . '/' . $this->pluginInfo->name . '/assets/css/styles.css', array(), null, 'all');
         wp_enqueue_script('dl_tfc_css');
+    }
+
+    function adminEnqueueScripts() {
+        wp_register_script('dl_tfc_bootstrap', WP_PLUGIN_URL . '/' . $this->pluginInfo->name . '/assets/js/bootstrap.min.js', array('jquery'), NULL);
+        wp_enqueue_script('dl_tfc_bootstrap');
+
+        wp_enqueue_style('dl_tfc_css_bootstrap', WP_PLUGIN_URL . '/' . $this->pluginInfo->name . '/assets/css/bootstrap-iso.css', array(), null, 'all');
+        wp_enqueue_script('dl_tfc_css_bootstrap');
+        wp_enqueue_style('dl_tfc_css_bootstrap_theme', WP_PLUGIN_URL . '/' . $this->pluginInfo->name . '/assets/css/bootstrap-theme.css', array(), null, 'all');
+        wp_enqueue_script('dl_tfc_css_bootstrap_theme');
     }
 
 }
