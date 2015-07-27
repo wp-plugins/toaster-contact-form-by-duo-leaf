@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Toaster Contact Form by Duo Leaf
  * Plugin URI: http://DuoLeaf.com/toaster-contact-from-wordpress-plugin/
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Duo Leaf
  * Author URI: http://DuoLeaf.com/
  * Description: This plugin creates contact form on the bottom right corner of your site, with a 'toaster' like effect.
@@ -104,6 +104,6 @@ class dl_tcf_ToasterWidget {
 
 }
 
-require_once(WP_PLUGIN_DIR . '/toaster-contact-form-by-duoleaf/core/plugin-info.php');
+require_once(WP_PLUGIN_DIR . '/toaster-contact-form-by-duo-leaf/core/plugin-info.php');
 $dl_tcf_pluginInfo = new dl_tcf_PluginInfo();
 $dl_tcf_toasterWidget = new dl_tcf_ToasterWidget($dl_tcf_pluginInfo);

@@ -13,7 +13,7 @@ class dl_tcf_PluginInfo {
      */
     public function __construct() {
 
-        $this->name = "toaster-contact-form-by-duoleaf";
+        $this->name = "toaster-contact-form-by-duo-leaf";
         $this->displayName = "Toaster Contact Form by Duo Leaf";
     }
 

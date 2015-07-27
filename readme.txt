@@ -42,6 +42,9 @@ This section describes how to install the plugin and get it working.
 
 == Changelog ==
 
+= 1.0.2 =
+* Bug Fix
+
 = 1.0.1 =
 * Improved the admin area.
 
