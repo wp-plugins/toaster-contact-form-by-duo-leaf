@@ -3,7 +3,7 @@
 </script>
 <div class='tcf-container'>
     <div class='tcf-title'>
-        <?php echo $this->view->settings->title; ?>
+        <?php echo $this->view->settings->title; ?><span class='tcf-arrow-up'></span>
     </div>
     <div class='tcf-content'>
         <form>

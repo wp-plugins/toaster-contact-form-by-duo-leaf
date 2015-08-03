@@ -1,8 +1,8 @@
 === Toaster Contact Form by Duo Leaf ===
 Contributors: DuoLeaf
-Tags: contact form, tray, popup, toaster, wigdet area, wigdet, tray, tray area
+Tags: contact form, tray, popup, toaster, wigdet area, wigdet, tray, tray area, form
 Requires at least: 3.0.0
-Tested up to: 4.2.2
+Tested up to: 4.2.3
 Stable tag: trunk
 License: GPLv3
 
@@ -41,6 +41,9 @@ This section describes how to install the plugin and get it working.
 4. Toaster Contact Form Settings
 
 == Changelog ==
+
+= 1.0.3 =
+* Added open and close icons to the form
 
 = 1.0.2 =
 * Bug Fix

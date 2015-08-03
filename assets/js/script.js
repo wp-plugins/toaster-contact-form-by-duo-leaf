@@ -12,12 +12,20 @@ var tfcToasterHeightClosed = 40;
 function tfcOpenToaster() {
     jQuery(".tcf-container").animate({height: tfcToasterHeightOpened}, 300);
     tfcToasterVisible = true;
+
+    var arrow = jQuery(".tcf-arrow-up");
+    arrow.addClass('tcf-arrow-down');
+    arrow.removeClass('tcf-arrow-up');
 }
 
 function tfcCloseToaster() {
     jQuery(".tcf-container").animate({height: tfcToasterHeightClosed}, 300);
     tfcToasterVisible = false;
     document.cookie = "toaster-closed";
+
+    var arrow = jQuery(".tcf-arrow-down");
+    arrow.addClass('tcf-arrow-up');
+    arrow.removeClass('tcf-arrow-down');
 }
 
 //    function tfcShouldToasterStayClosed() {
